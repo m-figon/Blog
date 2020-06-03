@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:89vh;
+}
+.home img{
+    width:20rem;
+    border-radius: 10px;
+}
+.quote{
+    height:7rem;
+    width:21rem;
+    padding: 0.5rem;
+}
+.quote p{
+    font-size: 1rem;
+}
