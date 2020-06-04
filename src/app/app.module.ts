@@ -7,6 +7,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { AddComponent } from './add/add.component';
 import { ChoiceComponent } from './choice/choice.component';
 import { HomeComponent } from './home/home.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
