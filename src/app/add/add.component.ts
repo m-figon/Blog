@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-
+  public title="";
+  public img="";
+  public content="";
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  addPost(){
+    console.log('adding posts');
+  }
 }

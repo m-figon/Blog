@@ -1,1 +1,8 @@
-<p>add works!</p>
+<div class="add">
+    <div class="form">
+        <h1>Post title</h1><input [(ngModel)]="title" type="text">
+        <h1>Img src</h1><input [(ngModel)]="img" type="text">
+        <h1>Content</h1><textarea [(ngModel)]="content"></textarea>
+        <button (click)="addPost()">Add Post</button>
+    </div>
+</div>

@@ -10,7 +10,7 @@ export class ChoiceComponent implements OnInit {
   posts;
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
-    this.http.get<any>('https://my-json-server.typicode.com/m-figon/demo/users').subscribe(data => {
+    this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog').subscribe(data => {
       //console.log(data);
       this.posts = data;
     })
