@@ -19,6 +19,20 @@
     width: 10rem;
     height: 1.5rem;
 }
+.one-line{
+    display: flex;
+    justify-content: flex-end;
+}
+#num{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: rgb(9, 72, 116);
+}
+#num:hover,
+#title:hover{
+    cursor: pointer;
+    color: rgb(241, 174, 28);
+}
 .post{
     display: flex;
     flex-direction: column;

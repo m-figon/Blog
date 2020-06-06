@@ -8,9 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostComponent implements OnInit {
   @Input() public parentPosts;
   @Input() public parentSearch;
-  constructor() { }
+  @Input() public parentPages;
 
+  constructor() { }
+  currentPage=1;
+  minVal=-1;
+  maxVal=8;
   ngOnInit(): void {
+  }
+  changePage(num){
+    this.currentPage=num;
+    this.maxVal=8*this.currentPage;
+    this.minVal=this.maxVal-9;
   }
 
 }

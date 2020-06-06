@@ -1,10 +1,24 @@
 <div class="posts">
 
-<div class="post" *ngFor="let post of parentPosts">
+    <ng-container *ngFor="let post of parentPosts">
 
-<div class="post-content" *ngIf="post.title.includes(parentSearch)">
-    <a routerLink="/post/{{post.id}}" routerLinkActive="active"> <h1>{{post.title}}</h1></a>
-<img src="{{post.img}}">
+        <ng-container *ngIf="post.title.includes(parentSearch) && post.id<maxVal && post.id>minVal">
+            <div class="post">
+            <div class="post-content">
+                <a routerLink="/post/{{post.id}}" routerLinkActive="active">
+                    <h1 id="title">{{post.title}}</h1>
+                </a>
+                <img src="{{post.img}}">
+            </div>
+            </div>
+        </ng-container>
+    </ng-container>
+
+
 </div>
-</div>
+
+<div class="one-line">
+    <div *ngFor="let number of parentPages">
+        <h1 id="num" (click)="changePage(number)">{{number}}</h1>
+    </div>
 </div>
