@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PostsService } from './choice.service';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./choice.component.css']
 })
 export class ChoiceComponent implements OnInit {
+  search="";
   posts;
   constructor(private http: HttpClient) {}
   ngOnInit(): void {

@@ -1,0 +1,10 @@
+<div class="posts">
+
+<div class="post" *ngFor="let post of parentPosts">
+
+<div class="post-content" *ngIf="post.title.includes(parentSearch)">
+    <a routerLink="/post/{{post.id}}" routerLinkActive="active"> <h1>{{post.title}}</h1></a>
+<img src="{{post.img}}">
+</div>
+</div>
+</div>

@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { AppService } from './app.service';
+import { PostComponent } from './choice/post/post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { AppService } from './app.service';
     AddComponent,
     ChoiceComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
