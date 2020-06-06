@@ -13,12 +13,15 @@
     height:30rem;
     grid-template-columns: auto auto auto auto;
 }
-.search-bar input{
+.search-bar input,
+.search-bar select{
     border-radius: 5px;
     border: 1px solid rgb(9, 72, 116);
     width: 10rem;
     height: 1.5rem;
+    margin-left: 1rem;
 }
+
 .one-line{
     display: flex;
     justify-content: flex-end;

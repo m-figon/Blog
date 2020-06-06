@@ -9,6 +9,7 @@ export class PostComponent implements OnInit {
   @Input() public parentPosts;
   @Input() public parentSearch;
   @Input() public parentPages;
+  @Input() public parentFilter;
 
   constructor() { }
   currentPage=1;
