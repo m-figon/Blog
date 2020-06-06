@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddComponent} from './add/add.component';
 import { ChoiceComponent} from './choice/choice.component';
 import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: "add", component: AddComponent
+  },
+  {
+    path: "post/:id", component: DetailsComponent
   }
 ];
 

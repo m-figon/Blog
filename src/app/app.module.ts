@@ -9,13 +9,16 @@ import { ChoiceComponent } from './choice/choice.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
+import { AppService } from './app.service';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
     AddComponent,
     ChoiceComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

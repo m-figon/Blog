@@ -13,7 +13,6 @@ export class AddComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    
   }
   addPost(){
     console.log('adding posts');
@@ -21,6 +20,8 @@ export class AddComponent implements OnInit {
         title: this.title,
         img: this.img,
         content: this.content
-      });
+      }).toPromise().then(data=>{
+        console.log(data);
+      })
   }
 }

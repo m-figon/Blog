@@ -2,7 +2,7 @@
 <div class="posts">
     <div class="post" *ngFor="let post of posts">
         <div class="post-content">
-            <a routerLink="/{{post.title}}" routerLinkActive="active"> <h1>{{post.title}}</h1></a>
+            <a routerLink="/post/{{post.id}}" routerLinkActive="active"> <h1>{{post.title}}</h1></a>
         <img src="{{post.img}}">
         </div>
         
