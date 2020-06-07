@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Blog';
+  loginValue;
+  parentMethod($event){
+    this.loginValue= $event;
+    console.log("login value equals" + this.loginValue);
+  }
+  
+  
 }

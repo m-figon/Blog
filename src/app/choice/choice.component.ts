@@ -18,7 +18,7 @@ export class ChoiceComponent implements OnInit {
   postNames = [];
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
-    this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog').subscribe(data => {
+    this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog/posts').subscribe(data => {
       //console.log(data);
       this.posts = data;
       this.rawPosts = data.slice();

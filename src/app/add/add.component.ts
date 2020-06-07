@@ -33,7 +33,7 @@ export class AddComponent implements OnInit {
     tmp+=currentDate.substr(3,2);
     newCurrentDate+=tmp;
     console.log(newCurrentDate);
-    this.http.post<any>("https://rocky-citadel-32862.herokuapp.com/Blog", {
+    this.http.post<any>("https://rocky-citadel-32862.herokuapp.com/Blog/posts", {
         title: this.title,
         img: this.img,
         content: this.content,
