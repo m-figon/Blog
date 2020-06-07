@@ -34,18 +34,10 @@ export class ChoiceComponent implements OnInit {
     console.log('select change');
     if(this.filter===""){
       this.posts=this.rawPosts.slice();
-      console.log('1');
-    }if(this.filter==="1"){
-      /*
-      this.postNames=[];
-      for(let post of this.posts){
-        this.postNames.push(post.title);
+      for(let i=0; i<this.posts.length; i++){
+        this.posts[i].id=i;
       }
-      this.postNames.sort();
-      console.log(this.postNames);
-      this.posts=[];
-      for(let post)
-      */
+    }if(this.filter==="1"){
      var sortedObjs = _.sortBy( this.rawPosts, 'title' ); 
      console.log(sortedObjs);
      this.posts=sortedObjs;
@@ -60,9 +52,20 @@ export class ChoiceComponent implements OnInit {
         this.posts[i].id=i;
       }
     }if(this.filter==="3"){
-      console.log('from oldest date sorting');
+      var sortedObjs = _.sortBy( this.rawPosts, 'date' ); 
+      this.posts=sortedObjs;
+      for(let i=0; i<this.posts.length; i++){
+        this.posts[i].id=i;
+      }
+      console.log(this.posts);
     }if(this.filter==="4"){
-      console.log('from newest date sorting');
+      var sortedObjs = _.sortBy( this.rawPosts, 'date' ); 
+      sortedObjs.reverse();
+      this.posts=sortedObjs;
+      for(let i=0; i<this.posts.length; i++){
+        this.posts[i].id=i;
+      }
+      console.log(this.posts);
     }
   }
 }

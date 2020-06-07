@@ -1,17 +1,19 @@
 .details{
     display: flex;
     width:100vw;
-    height:89vh;
     justify-content: center;
-    align-items: center;
+    padding-top: 2rem;
+}
+.one-line{
+    display: flex;
 }
 .details-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 30rem;
     width: 40rem;
+    height: auto;
     border: 1px solid rgb(9, 72, 116);
     border-radius: 5px;
     background: rgb(9, 72, 116);
@@ -21,6 +23,10 @@
 .details-content h1{
     color: white;
     font-size: 1.5rem;
+}
+.details-content h2{
+    color: white;
+    font-size: 0.8rem;
 }
 .details-content img{
     width: 15rem;
