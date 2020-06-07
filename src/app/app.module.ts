@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { AppService } from './app.service';
 import { PostComponent } from './choice/post/post.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { PostComponent } from './choice/post/post.component';
     ChoiceComponent,
     HomeComponent,
     DetailsComponent,
-    PostComponent
+    PostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

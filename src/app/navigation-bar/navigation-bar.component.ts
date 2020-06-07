@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationBarComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit(): void {
   }
-
+  loginClick(){
+    console.log('login click');
+  }
 }
