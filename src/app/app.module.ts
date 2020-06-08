@@ -13,6 +13,7 @@ import { DetailsComponent } from './details/details.component';
 import { AppService } from './app.service';
 import { PostComponent } from './choice/post/post.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     DetailsComponent,
     PostComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

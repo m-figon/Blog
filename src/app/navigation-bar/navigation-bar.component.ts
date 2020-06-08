@@ -11,10 +11,23 @@ export class NavigationBarComponent implements OnInit {
   ngOnInit(): void {
   }
   public loginState=false;
-  @Output() emiter = new EventEmitter();
+  public registerState=false;
+  @Input() public parentLoged;
+  @Output() loginEmiter = new EventEmitter();
+  @Output() registerEmiter = new EventEmitter();
+  @Output() accountEmiter = new EventEmitter();
   loginClick(){
     console.log('login click');
     this.loginState = !this.loginState;
-    this.emiter.emit(this.loginState);
+    this.loginEmiter.emit(this.loginState);
+  }
+  registerClick(){
+    console.log('register click');
+    this.registerState = !this.registerState;
+    this.registerEmiter.emit(this.registerState);
+  }
+  logoutClick(){
+    console.log('logout click');
+    this.accountEmiter.emit("");
   }
 }

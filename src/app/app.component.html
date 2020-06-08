@@ -13,10 +13,13 @@
 
 <!-- Toolbar -->
 <div class="app">
-<app-navigation-bar (emiter)="parentMethod($event)"></app-navigation-bar>
-<ng-container *ngIf="loginValue">
-<app-login (emiter)="parentMethod($event)"></app-login>
+<app-navigation-bar (loginEmiter)="parentMethod($event)" (registerEmiter)="parentMethod3($event)" (accountEmiter)="parentMethod2($event)" [parentLoged]="logedUser"></app-navigation-bar>
+<ng-container *ngIf="loginValue && !registerValue">
+<app-login (loginEmiter)="parentMethod($event)" (accountEmiter)="parentMethod2($event)"></app-login>
 </ng-container>
+<ng-container *ngIf="!loginValue && registerValue">
+    <app-register (registerEmiter)="parentMethod3($event)"></app-register>
+    </ng-container>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

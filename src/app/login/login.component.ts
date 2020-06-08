@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   password = "";
   users;
   correctFlag = false;
-  @Output() emiter = new EventEmitter();
+  @Output() loginEmiter = new EventEmitter();
+  @Output() accountEmiter = new EventEmitter();
+
   ngOnInit(): void {
     this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog/users').subscribe(data => {
       //console.log(data);
@@ -23,14 +25,14 @@ export class LoginComponent implements OnInit {
     })
   }
   closeLogin() {
-    this.emiter.emit(false);
+    this.loginEmiter.emit(false);
   }
   loginSend() {
     for (let user of this.users) {
       if (this.account === user.account && this.password === user.password) {
         console.log('you loged!');
         this.correctFlag = true;
-        this.emiter.emit(false);
+        this.accountEmiter.emit(this.account);
       }
     }
     if (!this.correctFlag) {
