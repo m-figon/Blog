@@ -1,10 +1,10 @@
 <div class="register">
     <div class="register-form">
         <button id="close-button" (click)="closeRegister()">X</button>
-        <h1>Account</h1><input [(ngModel)]="account" type="text">
-        <h1>Email</h1><input [(ngModel)]="email" type="text">
-        <h1>Password</h1><input  [(ngModel)]="password" type="password">
-        <h1>Confirm Password</h1><input  [(ngModel)]="password2" type="password">
+        <h1>Account</h1><input autocomplete="off" id="{{accountId}}" (focus)="focusHandler('accountTooltip')" (blur)="blurHandler('accountTooltip')" [(ngModel)]="account" type="text"><div class="account-tooltip" id="{{accountTooltip}}">Username must consist of 4-10 characters which are either digits, letters or -_.</div>
+        <h1>Email</h1><input autocomplete="off" id="{{emailId}}" (focus)="focusHandler('emailTooltip')"  (blur)="blurHandler('emailTooltip')" [(ngModel)]="email" type="text"><div class="email-tooltip" id="{{emailTooltip}}">Please enter correct email adress</div>
+        <h1>Password</h1><input autocomplete="off" id="{{passwordId}}" (focus)="focusHandler('passwordTootlip')" (blur)="blurHandler('passwordTootlip')" [(ngModel)]="password" type="password"><div class="password-tooltip" id="{{passwordTootlip}}">Password must consist of 8-13 letters, cointain: one upper and lower case letter, one digit, one special character</div>
+        <h1>Confirm Password</h1><input autocomplete="off" id="{{password2Id}}" (focus)="focusHandler('password2Tooltip')" (blur)="blurHandler('password2Tooltip')" [(ngModel)]="password2" type="password"><div class="password2-tooltip" id="{{password2Tooltip}}">This field must match your password</div>
         <button (click)="registerUser()">Register</button>
     </div>
 </div>
