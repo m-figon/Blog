@@ -10,5 +10,9 @@
         <option value="4">Newest</option>
     </select>
 </div>
+    <div class="loading-page" [style.display]="loaded ? 'none' : 'flex'"> 
+        <img src="assets/img/loading.gif">
+    </div>
         <app-post [parentPosts]="posts" [parentCurrentPosts]="posts" [parentSearch]="search" [parentPages]="pages" [parentFilter]="filter"></app-post>
 </div>
+

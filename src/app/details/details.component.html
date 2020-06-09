@@ -17,7 +17,7 @@
                 <div class="single-comment">
                     <h1>{{logedUser}}:</h1>
                     <input type="text" [(ngModel)]="newComment">
-                    <button>Send</button>
+                    <button (click)="addComment()">Send</button>
                 </div>
             </ng-container>
         </div>

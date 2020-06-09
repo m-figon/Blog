@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PostsService } from './choice.service';
 import { HttpClient } from '@angular/common/http';
 import * as _ from 'underscore';
-
 @Component({
   selector: 'app-choice',
   templateUrl: './choice.component.html',
@@ -16,6 +15,7 @@ export class ChoiceComponent implements OnInit {
   pagesNumber;
   pages = [];
   postNames = [];
+  loaded=false;
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog/posts').subscribe(data => {
@@ -28,6 +28,12 @@ export class ChoiceComponent implements OnInit {
       for(let i=1; i<this.pagesNumber+1; i++){
         this.pages.push(i);
       }
+      this.posts=this.rawPosts.slice();
+      for(let i=0; i<this.posts.length; i++){
+        this.posts[i].id=i;
+      }
+      this.loaded=true;
+      console.log(this.loaded);
     })
   }
   selectChange(){
