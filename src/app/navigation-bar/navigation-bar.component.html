@@ -1,14 +1,22 @@
 <div class="navigation-bar">
     <div class="left">
         <div class="middle">
-            <a routerLink="/" routerLinkActive="active"><h1>Blog</h1></a>
+            <a routerLink="/" routerLinkActive="active">
+                <h1>Blog</h1>
+            </a>
         </div>
     </div>
     <div class="middle">
         <div class="middle">
-            <a routerLink="/choice" routerLinkActive="active"><h1>Choice</h1></a>
-            <a routerLink="/add" routerLinkActive="active"><h1>Add</h1></a>
-            <h1>{{parentLoged}}</h1>
+            <a routerLink="/choice" routerLinkActive="active">
+                <h1>Choice</h1>
+            </a>
+            <ng-container *ngIf="parentLoged">
+                <a routerLink="/add" routerLinkActive="active">
+                    <h1>Add</h1>
+                </a>
+                <h1>{{parentLoged}}</h1>
+            </ng-container>
             <ng-container *ngIf="parentLoged; else loggedOut">
                 <h1 (click)="logoutClick()">Logout</h1>
             </ng-container>

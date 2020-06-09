@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AppService } from '../app.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private appService: AppService) { }
   account = "";
   password = "";
   users;
@@ -34,6 +35,8 @@ export class LoginComponent implements OnInit {
         console.log('you loged!');
         this.correctFlag = true;
         this.accountEmiter.emit(this.account);
+        this.appService.setAccount(this.account);
+        this.loginEmiter.emit(false);
       }
     }
     if (!this.correctFlag) {

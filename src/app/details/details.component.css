@@ -36,3 +36,34 @@
     color: white;
     font-size: 1rem;
 }
+.comments{
+    width:100%;
+}
+.single-comment{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.459);
+    border-radius: 5px;
+
+    margin-bottom: 0.2rem;
+}
+.single-comment h1{
+    color:rgb(9, 72, 116);
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+.single-comment input{
+    width: 85%;
+    height: 1rem;
+    border-radius: 5px;
+}
+.single-comment button{
+    width: 4rem;
+    height: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(9, 72, 116);
+    background: rgb(9, 72, 116);
+    color: white;
+}

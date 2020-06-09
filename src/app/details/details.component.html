@@ -1,10 +1,27 @@
 <div class="details">
     <div class="details-content">
         <div class="one-line">
-            <h1>{{post[id].title}}</h1>
+            <h1>"{{post[id].title}}" by {{post[id].author}}</h1>
             <h2>{{post[id].date}}</h2>
         </div>
         <img src="{{post[id].img}}">
         <p>{{post[id].content}}</p>
+        <div class="comments">
+            <ng-container  *ngFor="let comment of post[id].comments">
+                <div class="single-comment">
+                    <h1>{{comment.author}}:</h1>
+                    <h1>{{comment.content}}</h1>
+                </div>
+            </ng-container>
+            <ng-container  *ngIf="logedUser">
+                <div class="single-comment">
+                    <h1>{{logedUser}}:</h1>
+                    <input type="text" [(ngModel)]="newComment">
+                    <button>Send</button>
+                </div>
+            </ng-container>
+        </div>
+        
     </div>
+
 </div>

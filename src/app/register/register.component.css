@@ -7,7 +7,7 @@
     width:100vw;
     height:89vh;
     justify-content: center;
-    margin-top: 3.5rem;
+    align-items: center;
 }
 .register-form{
     display: flex;

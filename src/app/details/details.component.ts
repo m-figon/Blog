@@ -11,10 +11,13 @@ import { HttpClient } from '@angular/common/http';
 export class DetailsComponent implements OnInit {
   id;
   post;
+  logedUser;
+  newComment="";
   constructor(private route: ActivatedRoute,private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
      this.id = parseInt(this.route.snapshot.paramMap.get('id'));
       this.post = history.state;
+      this.logedUser = this.appService.getAccount();
   }
 
 }
