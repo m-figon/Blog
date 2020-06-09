@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   password = "";
   users;
   correctFlag = false;
+  wrongUser = false;
   @Output() loginEmiter = new EventEmitter();
   @Output() accountEmiter = new EventEmitter();
 
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
       alert('wrong data');
       this.account = "";
       this.password = "";
+      this.wrongUser=true;
     }
   }
 }

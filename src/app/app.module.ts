@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AddComponent } from './add/add.component';
@@ -14,6 +14,20 @@ import { AppService } from './app.service';
 import { PostComponent } from './choice/post/post.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+const routes: Routes = [
+  {
+    path: "", component: HomeComponent
+  },
+  {
+    path: "choice", component: ChoiceComponent
+  },
+  {
+    path: "add", component: AddComponent
+  },
+  {
+    path: "post/:id", component: DetailsComponent
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +41,12 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
+  exports: [RouterModule],
   providers: [AppService],
   bootstrap: [AppComponent]
 })

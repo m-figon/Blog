@@ -9,6 +9,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.login-tooltip{
+    color: white;
+    width:8rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(9, 72, 116);
+    font-size: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+.login-tooltip{
+    position: absolute;
+    margin-left:14rem;
+    margin-top:-2rem;
+}
 .login-form{
     display: flex;
     z-index: 3;
@@ -16,7 +31,7 @@
     align-items: center;
     justify-content: center;
     height: 20rem;
-    width: 30rem;
+    width: 40rem;
     border: 1px solid rgb(9, 72, 116);
     border-radius: 5px;
     background: rgb(9, 72, 116);
