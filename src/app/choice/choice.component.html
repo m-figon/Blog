@@ -1,18 +1,20 @@
 <div class="posts-display">
-
-<div class="search-bar">
-    <input type="text" [(ngModel)]="search">
-    <select type="text" [(ngModel)]="filter" (change)='selectChange()'>
-        <option value="">Filter</option>
-        <option value="1">A-Z</option>
-        <option value="2">Z-A</option>
-        <option value="3">Oldest</option>
-        <option value="4">Newest</option>
-    </select>
-</div>
-    <div class="loading-page" [style.display]="loaded ? 'none' : 'flex'"> 
-        <img src="assets/img/loading.gif">
+<div class="post-view">
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="search">
+        <select type="text" [(ngModel)]="filter" (change)='selectChange()'>
+            <option value="">Filter</option>
+            <option value="1">A-Z</option>
+            <option value="2">Z-A</option>
+            <option value="3">Oldest</option>
+            <option value="4">Newest</option>
+        </select>
     </div>
-        <app-post [parentPosts]="posts" [parentCurrentPosts]="posts" [parentSearch]="search" [parentPages]="pages" [parentFilter]="filter"></app-post>
+        <div class="loading-page" [style.display]="loaded ? 'none' : 'flex'"> 
+            <img src="assets/img/loading.gif">
+        </div>
+            <app-post [parentPosts]="posts" [parentCurrentPosts]="posts" [parentSearch]="search" [parentPages]="pages" [parentFilter]="filter"></app-post>
+    </div>
 </div>
+
 

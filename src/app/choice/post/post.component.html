@@ -4,12 +4,16 @@
 
         <ng-container *ngIf="post.title.includes(parentSearch) && post.id<maxVal && post.id>minVal">
             <div class="post">
+                <a routerLink="/post/{{post.id}}" routerLinkActive="active" [state]="parentCurrentPosts">
                 <div class="post-content">
-                    <a routerLink="/post/{{post.id}}" routerLinkActive="active" [state]="parentCurrentPosts">
-                        <h1 id="title">{{post.title}}</h1>
-                    </a>
                     <img src="{{post.img}}">
+
+                    <div class="post-title">
+                        <h1 id="title">{{post.title}}</h1>
+                    </div>
                 </div>
+                </a>
+
             </div>
         </ng-container>
     </ng-container>

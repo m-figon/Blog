@@ -7,19 +7,27 @@
     flex-direction: column;
     margin-top: 5vh;
 }
+.post-view{
+    width: 55rem;
+    padding:3rem 2rem;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    border-radius: 10px;
+}
 .posts{
     display: grid;
-    width:50rem;
+    width:55rem;
     height:30rem;
     grid-template-columns: auto auto auto auto;
 }
 .search-bar input,
 .search-bar select{
-    border-radius: 5px;
-    border: 1px solid rgb(9, 72, 116);
+    border-radius: 7px;
+    border: 1.5px solid rgb(173, 173, 173);
     width: 10rem;
     height: 1.5rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .one-line{
@@ -32,15 +40,11 @@
     color: rgb(9, 72, 116);
 }
 #selectedNum{
-    color: rgb(241, 174, 28);
+    text-decoration: underline;
 }
 #selectedNum:hover,
 #num:hover{
     cursor: pointer;
-}
-#title:hover{
-    cursor: pointer;
-    color: rgb(241, 174, 28);
 }
 .post{
     display: flex;
@@ -57,11 +61,14 @@
     justify-content: center;
     height: 12rem;
     width: 10rem;
-    border: 1px solid rgb(9, 72, 116);
-    border-radius: 5px;
-    padding: 0.5rem 0.5rem;
     background: rgb(9, 72, 116);
-    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);  
+    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);
+     border: 2px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    padding: 1rem 1rem;
+}
+.post-content:hover{
+    border: 2px solid rgb(113, 194, 248);
 }
 .post h1{
     font-size: 1rem;
@@ -71,9 +78,8 @@
     font-size: 1rem;
 }
 .post img{
-    width:7rem;
-    height:5rem;
-    border-radius: 5px;
+    width:10rem;
+    height:6rem;
 }
 .loading-page{
     position: absolute;

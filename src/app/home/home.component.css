@@ -5,15 +5,28 @@
     width:100vw;
     height:89vh;
 }
-.home img{
-    width:20rem;
+.img-container{
+    width:40rem;
+    height:40rem;
     border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+}
+.img-container img{
+    margin: 3rem 3rem;
+    width:20rem;
+    border-radius: 5px;
 }
 .quote{
-    height:7rem;
-    width:21rem;
+    position: relative;
+    border-radius: 7px;
+    top:-60%;
+    left:60%;
+    height:14rem;
+    width:15rem;
     padding: 0.5rem;
+    z-index: 3;
 }
 .quote p{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }

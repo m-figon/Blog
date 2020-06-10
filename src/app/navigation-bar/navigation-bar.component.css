@@ -3,15 +3,16 @@
     width:100vw;
     height:3rem;
     background: rgb(9, 72, 116);
-    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);    display: flex;
+    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%); 
+    display: flex;
 }
 .navigation-bar h1{
     font-size: 2rem;
     color: white;
-}
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);}
 .navigation-bar h1:hover{
     cursor: pointer;
-    color: rgb(241, 174, 28);
+    text-decoration: underline;
 }
 .middle .middle h1{
     font-size: 1.5rem;
