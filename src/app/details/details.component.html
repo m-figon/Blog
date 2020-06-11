@@ -5,8 +5,11 @@
             <h2>{{post[id].date}}</h2>
         </div>
         <img src="{{post[id].img}}">
-        <p>{{post[id].content}}</p>
+        <div class="details-text">
+            <p>{{post[id].content}}</p>
+        </div>
         <div class="comments">
+            <h1>Comments</h1>
             <ng-container  *ngFor="let comment of post[id].comments">
                 <div class="single-comment">
                     <h1>{{comment.author}}:</h1>
@@ -14,9 +17,9 @@
                 </div>
             </ng-container>
             <ng-container  *ngIf="logedUser">
-                <div class="single-comment">
-                    <h1>{{logedUser}}:</h1>
-                    <input type="text" [(ngModel)]="newComment">
+                <div class="new-comment">
+                    <textarea columns="15" rows="10" [(ngModel)]="newComment" (focus)="changeArea('Enter new comment value...','')" (blur)="changeArea('','Enter new comment value...')"></textarea>
+                    <h1>commenting as: {{logedUser}}</h1>
                     <button (click)="addComment()">Send</button>
                 </div>
             </ng-container>

@@ -14,27 +14,34 @@
     justify-content: flex-start;
     width: 40rem;
     height: auto;
-    border: 1px solid rgb(9, 72, 116);
+    border: 1px solid rgba(160, 160, 160, 0.479);
     border-radius: 5px;
-    background: rgb(9, 72, 116);
-    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);  
+    background-color: white;
     padding: 1rem 2rem;
 }
 .details-content h1{
-    color: white;
+    color: rgb(180, 170, 73);
     font-size: 1.5rem;
 }
 .details-content h2{
-    color: white;
+    color: rgb(180, 170, 73);
     font-size: 0.8rem;
 }
 .details-content img{
-    width: 15rem;
-    height: 12rem;
+    width: 23rem;
+    height: 15rem;
+    border-radius: 5px;
+    filter: grayscale(20%);
 }
 .details-content p{
-    color: white;
+    color: black;
     font-size: 1rem;
+}
+.details-text{
+    background: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
 }
 .comments{
     width:100%;
@@ -44,13 +51,27 @@
     align-items: center;
     padding-right: 1rem;
     padding-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.459);
-    border-radius: 5px;
-
     margin-bottom: 0.2rem;
+    border-bottom: 1.0px solid rgb(180, 170, 73);
+}
+.new-comment{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 0.2rem;
+    border: 1.0px solid rgb(180, 170, 73);
+}
+.new-comment h1{
+    color: rgb(180, 170, 73);
+    font-size: 1.0rem;
 }
 .single-comment h1{
-    color:rgb(9, 72, 116);
+    color:black;
     font-size: 1rem;
     margin-right: 0.5rem;
 }
@@ -59,11 +80,18 @@
     height: 1rem;
     border-radius: 5px;
 }
-.single-comment button{
+.new-comment textarea{
+    width: 100%;
+}
+.new-comment button{
     width: 4rem;
     height: 1.2rem;
     border-radius: 5px;
-    border: 1px solid rgb(9, 72, 116);
-    background: rgb(9, 72, 116);
+    border: 1px solid rgb(116, 116, 116);
+    background: rgb(180, 170, 73);
     color: white;
+}
+.new-comment button:hover{
+    background: rgb(155, 146, 63);
+    cursor: pointer;
 }

@@ -12,13 +12,19 @@ export class DetailsComponent implements OnInit {
   id;
   post;
   logedUser;
-  newComment="";
+  newComment="Enter new comment value...";
   constructor(private route: ActivatedRoute,private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
      this.id = parseInt(this.route.snapshot.paramMap.get('id'));
       this.post = history.state;
       this.logedUser = this.appService.getAccount();
   }
+  changeArea(oldValue, newValue){
+    if(this.newComment===oldValue){
+      this.newComment=newValue;
+    }
+  }
+
   addComment(){
     this.post[this.id].comments.push({
       author: this.logedUser,

@@ -45,6 +45,7 @@
 #selectedNum:hover,
 #num:hover{
     cursor: pointer;
+    color: rgb(180, 170, 73);
 }
 .post{
     display: flex;
@@ -61,14 +62,19 @@
     justify-content: center;
     height: 12rem;
     width: 10rem;
-    background: rgb(9, 72, 116);
-    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);
+    background: #3C3B3F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, rgb(66, 63, 41), #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, rgb(66, 63, 41), #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    
+
      border: 2px solid rgb(173, 173, 173);
     border-radius: 5px;
     padding: 1rem 1rem;
 }
 .post-content:hover{
-    border: 2px solid rgb(113, 194, 248);
+    border: 2px solid rgb(180, 170, 73);
 }
 .post h1{
     font-size: 1rem;
@@ -80,6 +86,7 @@
 .post img{
     width:10rem;
     height:6rem;
+    filter: grayscale(20%);
 }
 .loading-page{
     position: absolute;
