@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 export class AppService{
     blog = [];
     account="";
+    loginState;
+    registerState;
     constructor(private http: HttpClient) {}
     getPosts(){
         this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog').subscribe(data => {
@@ -14,6 +16,20 @@ export class AppService{
     }
     setAccount(value){
         this.account=value;
+    }
+    setLoginOrRegister(type,value){
+        if(type==="login"){
+            this.loginState=value;
+        }else if(type==="register"){
+            this.registerState=value;
+        }
+    }
+    getLoginOrRegister(type){
+        if(type==="login"){
+            return this.loginState;
+        }else if(type==="register"){
+            return this.registerState;
+        }
     }
     getAccount(){
         return(this.account);

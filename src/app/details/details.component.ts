@@ -12,12 +12,18 @@ export class DetailsComponent implements OnInit {
   id;
   post;
   logedUser;
+  loginState;
+  registerState;
   newComment="Enter new comment value...";
   constructor(private route: ActivatedRoute,private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
      this.id = parseInt(this.route.snapshot.paramMap.get('id'));
       this.post = history.state;
       this.logedUser = this.appService.getAccount();
+      setInterval(()=>{
+        this.loginState = this.appService.getLoginOrRegister("login");
+        this.registerState = this.appService.getLoginOrRegister("register");
+      },500)
   }
   changeArea(oldValue, newValue){
     if(this.newComment===oldValue){

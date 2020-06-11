@@ -3,10 +3,13 @@
     width:100vw;
     height:3rem;
     background: #3C3B3F;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, rgb(66, 63, 41), #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, rgb(66, 63, 41), #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, #423f29, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #423f29, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     display: flex;
+}
+.blured{
+    filter: blur(3px);
 }
 .navigation-bar h1{
     font-size: 2rem;

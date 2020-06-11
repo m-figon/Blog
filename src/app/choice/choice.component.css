@@ -42,6 +42,9 @@
 #selectedNum{
     text-decoration: underline;
 }
+.blured{
+    filter: blur(3px);
+}
 #selectedNum:hover,
 #num:hover{
     cursor: pointer;

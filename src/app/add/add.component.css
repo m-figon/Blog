@@ -10,39 +10,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 30rem;
+    height: 35rem;
     width: 25rem;
-    border: 1px solid rgb(9, 72, 116);
+    border: 1px solid rgb(116, 116, 116);
     border-radius: 5px;
-    background: rgb(9, 72, 116);
-    background: linear-gradient(90deg, rgba(9, 72, 116, 1) 0%, rgba(48, 52, 55, 1) 100%, rgba(0, 64, 103, 1) 100%);  
+    background-image: url('../background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
 }
-.form textarea{
+.blured{
+    filter: blur(3px);
+}
+.add-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 35rem;
+    width: 18rem;
+}
+#smaller{
+    font-size: 1.2rem;
+}
+.add-content textarea{
     height:7rem;
     width:18rem;
     margin-bottom: 1rem;
 }
-.form h1{
+.add-content h1{
     font-size: 1.5rem;
-    color: white;
+    color: rgb(180, 170, 73);
 }
-.form input{
+.add-content input{
     height:1.5rem;
     width:18rem;
 }
-.form button{
+.add-content button{
     height:2rem;
     width:5rem;
     border-radius: 5px;
-    border: 1px solid rgb(9, 72, 116);
-    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgb(116, 116, 116);
+    background: rgb(180, 170, 73);
     color: white;
 }
 input, textarea{
     border-radius: 5px;
-    border: 1px solid rgb(9, 72, 116);
+    border: 1px solid rgb(116, 116, 116);
 }
-.form button:hover{
-    background: rgba(255, 255, 255, 0.233);
+.add-content button:hover{
+    background: rgb(155, 146, 63);
     cursor: pointer;
 }

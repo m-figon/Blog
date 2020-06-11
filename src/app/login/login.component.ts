@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
   closeLogin() {
     this.loginEmiter.emit(false);
+    this.appService.setLoginOrRegister("login",false);
   }
   loginSend() {
     for (let user of this.users) {
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
         this.accountEmiter.emit(this.account);
         this.appService.setAccount(this.account);
         this.loginEmiter.emit(false);
+        this.appService.setLoginOrRegister("login",false);
       }
     }
     if (!this.correctFlag) {

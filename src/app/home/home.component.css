@@ -12,6 +12,9 @@
     background-color: white;
     border: 1px solid rgba(255, 255, 255, 0.479);
 }
+.blured{
+    filter: blur(3px);
+}
 .img-container img{
     margin: 3rem 3rem;
     width:20rem;

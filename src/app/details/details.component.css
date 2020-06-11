@@ -83,6 +83,9 @@
 .new-comment textarea{
     width: 100%;
 }
+.blured{
+    filter: blur(3px);
+}
 .new-comment button{
     width: 4rem;
     height: 1.2rem;

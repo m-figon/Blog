@@ -1,4 +1,5 @@
 import { Component, OnInit, Output , EventEmitter, Input} from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,8 +8,12 @@ import { Component, OnInit, Output , EventEmitter, Input} from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private appService: AppService) { }
   ngOnInit(): void {
+    setInterval(()=>{
+      this.loginState = this.appService.getLoginOrRegister("login");
+      this.registerState = this.appService.getLoginOrRegister("register");
+    },500)
   }
   public loginState=false;
   public registerState=false;
@@ -19,11 +24,13 @@ export class NavigationBarComponent implements OnInit {
   loginClick(){
     console.log('login click');
     this.loginState = !this.loginState;
+    this.appService.setLoginOrRegister("login",true);
     this.loginEmiter.emit(this.loginState);
   }
   registerClick(){
     console.log('register click');
     this.registerState = !this.registerState;
+    this.appService.setLoginOrRegister("register",true);
     this.registerEmiter.emit(this.registerState);
   }
   logoutClick(){

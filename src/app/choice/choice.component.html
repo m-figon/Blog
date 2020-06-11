@@ -1,4 +1,4 @@
-<div class="posts-display">
+<div class="posts-display" [class.blured]="loginState || registerState">
 <div class="post-view">
     <div class="search-bar">
         <input type="text" [(ngModel)]="search">

@@ -20,13 +20,14 @@ export class RegisterComponent implements OnInit {
   emailTooltip="hidden";
   passwordTootlip="hidden";
   password2Tooltip="hidden";
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private appService: AppService) {}
   @Output() registerEmiter = new EventEmitter();
 
   ngOnInit(): void {
   }
   closeRegister() {
     this.registerEmiter.emit(false);
+    this.appService.setLoginOrRegister("register",false);
   }
   focusHandler(value) {
     eval("this."+value+"='visible'");
