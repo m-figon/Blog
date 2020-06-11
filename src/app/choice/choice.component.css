@@ -37,7 +37,7 @@
 #num, #selectedNum{
     margin-right: 1rem;
     font-size: 1.5rem;
-    color: rgb(9, 72, 116);
+    color: black;
 }
 #selectedNum{
     text-decoration: underline;
@@ -97,7 +97,7 @@ background: linear-gradient(to right, rgb(66, 63, 41), #3C3B3F); /* W3C, IE 10+/
     left:0;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color:rgba(204, 204, 204, 1);
     z-index: 5;
 }
 .loading-page img{

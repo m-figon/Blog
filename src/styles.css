@@ -7,3 +7,6 @@ body{
 a{
     text-decoration: none
 }
+input:focus,select:focus,button:focus{
+    outline: none;
+}
