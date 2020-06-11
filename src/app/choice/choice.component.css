@@ -79,9 +79,17 @@ background: linear-gradient(to right, rgb(66, 63, 41), #3C3B3F); /* W3C, IE 10+/
 .post-content:hover{
     border: 2px solid rgb(180, 170, 73);
 }
+
 .post h1{
     font-size: 1rem;
     color: white;
+}
+.post-title h1{
+    font-size: 0.8rem;
+}
+.post-date h1{
+    font-size: 0.7rem;
+    color: rgb(180, 170, 73);
 }
 .post p{
     font-size: 1rem;

@@ -32,4 +32,32 @@
 }
 .quote p{
     font-size: 1.3rem;
+    font-family: 'Dancing Script', cursive;
 }
+@media screen and (max-width: 800px) {
+    .img-container{
+        width:25rem;
+        height:25rem;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .img-container img{
+        margin: 1.5rem 1rem;
+        width:13rem;
+        border-radius: 5px;
+    }
+    .quote{
+        position: relative;
+        display: flex;
+        top:0%;
+        left:0%;
+        align-items: center;
+        height:100%;
+        width:10rem;
+        padding: 0.5rem;
+    }
+    .quote p{
+        font-size: 0.8rem;
+    }
+  }
