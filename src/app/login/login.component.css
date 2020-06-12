@@ -21,8 +21,8 @@
 }
 .login-tooltip{
     position: absolute;
-    margin-left:19rem;
-    margin-top:7rem;
+    margin-left:90%;
+    margin-top:6rem;
     border: 1px solid rgb(116, 116, 116);
     background: rgb(180, 169, 73);
     color: white;
@@ -46,7 +46,7 @@
 }
 #close-button{
     margin-top:0;
-    margin-left: 25rem;
+    margin-left: 130%;
     width: 2rem;
     height: 2rem;
 }
@@ -62,7 +62,7 @@
 }
 .login-form-content input{
     height:1.5rem;
-    width:18rem;
+    width:85%;
 }
 .login-form-content{
     display: flex;
@@ -71,8 +71,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 18rem;
-    width:20rem;
+    height: 90%;
+    width:50%;
 }
 .login-form-content button{
     margin-top: 2rem;
@@ -90,4 +90,25 @@ input, textarea{
 .login-form-content button:hover{
     background: rgba(180, 169, 73, 0.863);
     cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+    .login-form{
+        height: 25rem;
+        width: 25rem;
+    }
+    #close-button{
+        margin-left: 120%;
+    }
+    .login-tooltip{
+        width:5rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .login-form{
+        height: 25rem;
+        width: 20rem;
+    }
+    .login-tooltip{
+        width:3rem;
+    }
 }

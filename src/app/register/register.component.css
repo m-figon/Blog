@@ -1,15 +1,15 @@
-.register{
+.register {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 3;
     display: flex;
-    width:100vw;
-    height:89vh;
+    width: 100vw;
+    height: 89vh;
     justify-content: center;
     align-items: center;
 }
-.register-form{
+.register-form {
     display: flex;
     z-index: 3;
     flex-direction: column;
@@ -19,94 +19,160 @@
     width: 40rem;
     border: 1px solid rgb(180, 170, 73);
     border-radius: 5px;
-    background-image: url('../background.jpg');
+    background-image: url("../background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: 100% 100%;
 }
-.register-form-content{
+.register-form-content {
     display: flex;
-    z-index: 5;
-    position: absolute;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 30rem;
-    width: 20rem;
+    height: 90%;
+    width: 50%;
 }
-#incorrect{
+#incorrect {
     border: 2px solid red;
 }
-#correct{
+#correct {
     border: 1px solid rgb(180, 170, 73);
 }
 .account-tooltip,
 .password-tooltip,
 .password2-tooltip,
-.email-tooltip{
+.email-tooltip {
     color: white;
-    width:8rem;
+    width: 8rem;
     padding: 0.5rem 0.5rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
     font-size: 0.7rem;
     background-color: rgb(180, 170, 73);
 }
-.account-tooltip{
+.account-tooltip {
     position: absolute;
-    margin-left:19rem;
-    margin-top:6rem;
+    margin-left: 19rem;
+    margin-top: 6rem;
 }
-.password-tooltip{
+.password-tooltip {
     position: absolute;
-    margin-left:19rem;
-    margin-top:17rem;
+    margin-left: 19rem;
+    margin-top: 17rem;
 }
-.password2-tooltip{
+.password2-tooltip {
     position: absolute;
-    margin-left:19rem;
-    margin-top:23rem;
+    margin-left: 19rem;
+    margin-top: 23rem;
 }
-.email-tooltip{
+.email-tooltip {
     position: absolute;
-    margin-left:19rem;
-    margin-top:12rem;
+    margin-left: 19rem;
+    margin-top: 12rem;
 }
-#close-button{
-    margin-top:0;
+#close-button {
+    margin-top: 0;
     margin-left: 25rem;
     width: 2rem;
     height: 2rem;
 }
-#visible{
+#visible {
     display: flex;
 }
-#hidden{
+#hidden {
     display: none;
 }
-.register-form h1{
+.register-form h1 {
     font-size: 1.5rem;
     color: rgb(180, 170, 73);
 }
-.register-form input{
-    height:1.5rem;
-    width:18rem;
+.register-form input {
+    height: 1.5rem;
+    width: 18rem;
 }
-.register-form button{
+.register-form button {
     margin-top: 2rem;
-    height:2rem;
-    width:5rem;
+    height: 2rem;
+    width: 5rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
     background: rgb(180, 170, 73);
     color: white;
 }
-input, textarea{
+input,
+textarea {
     border-radius: 5px;
     border: 1px solid rgb(180, 170, 73);
 }
-.register-form button:hover{
+.register-form button:hover {
     background: rgba(180, 169, 73, 0.863);
     cursor: pointer;
 }
+@media screen and (max-width: 900px) {
+    .register-form {
+        height: 35rem;
+        width: 30rem;
+    }
+    .register-form-content {
+        width: 80%;
+    }
+    .register-form input {
+        width: 14rem;
+    }
+    #close-button {
+        margin-left: 23rem;
+    }
+    .account-tooltip {
+        position: absolute;
+        margin-left: 14.5rem;
+        margin-top: 6rem;
+    }
+    .password-tooltip {
+        position: absolute;
+        margin-left: 14.5rem;
+        margin-top: 17rem;
+    }
+    .password2-tooltip {
+        position: absolute;
+        margin-left: 14.5rem;
+        margin-top: 23rem;
+    }
+    .email-tooltip {
+        position: absolute;
+        margin-left: 14.5rem;
+        margin-top: 12rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .register-form {
+        height: 35rem;
+        width: 20rem;
+    }
+    #close-button {
+        margin-left: 15rem;
+    }
+    .register-form h1 {
+        font-size: 1.2rem;
+    }
+    .account-tooltip,
+    .password-tooltip,
+    .password2-tooltip,
+    .email-tooltip {
+        width: 5rem;
+        font-size: 0.6rem;
+    }
+    .account-tooltip {
+        margin-top: 5rem;
+    }
+    .password-tooltip {
+        margin-top: 14rem;
+    }
+    .password2-tooltip {
+        margin-top: 21rem;
+    }
+    .email-tooltip {
+        margin-top: 11rem;
+    }
+}
+

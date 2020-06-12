@@ -52,3 +52,11 @@ background: linear-gradient(to right, #423f29, #3C3B3F); /* W3C, IE 10+/ Edge, F
     justify-content: flex-end;
     align-items: center;
 }
+@media screen and (max-width: 700px) {
+    .navigation-bar-content{
+        width:90%;
+    }
+    .navigation-bar h1{
+        font-size: 1.5rem;
+    }
+}

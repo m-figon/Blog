@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     height: 35rem;
-    width: 25rem;
+    width: 35rem;
     border: 1px solid rgb(116, 116, 116);
     border-radius: 5px;
     background-image: url('../background.jpg');
@@ -28,15 +28,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 35rem;
-    width: 18rem;
+    height: 100%;
+    width: 60%;
 }
 #smaller{
     font-size: 1.2rem;
 }
 .add-content textarea{
     height:7rem;
-    width:18rem;
+    width:100%;
     margin-bottom: 1rem;
 }
 .add-content h1{
@@ -45,7 +45,7 @@
 }
 .add-content input{
     height:1.5rem;
-    width:18rem;
+    width:100%;
 }
 .add-content button{
     height:2rem;
@@ -62,4 +62,25 @@ input, textarea{
 .add-content button:hover{
     background: rgb(155, 146, 63);
     cursor: pointer;
+}
+@media screen and (max-width: 650px) {
+    .form{
+        height: 35rem;
+        width: 25rem;
+    }
+    #smaller{
+        font-size: 1.0rem;
+    }
+    .add-content textarea{
+        height:10rem;
+    }
+    .add-content h1{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .form{
+        height: 35rem;
+        width: 20rem;
+    }
 }
