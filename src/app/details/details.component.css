@@ -1,13 +1,13 @@
-.details{
+.details {
     display: flex;
-    width:100vw;
+    width: 100vw;
     justify-content: center;
     padding-top: 2rem;
 }
-.one-line{
+.one-line {
     display: flex;
 }
-.details-content{
+.details-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,42 +19,42 @@
     background-color: white;
     padding: 1rem 2rem;
 }
-.details-content h1{
-    color: rgb(180, 170, 73);
+.details-content h1 {
+    color: #a5a5a5;
     font-size: 1.5rem;
 }
-.details-content h2{
-    color: rgb(180, 170, 73);
+.details-content h2 {
+    color: #a5a5a5;
     font-size: 0.8rem;
 }
-.details-content img{
+.details-content img {
     width: 23rem;
     height: 15rem;
     border-radius: 5px;
     filter: grayscale(20%);
 }
-.details-content p{
+.details-content p {
     color: black;
     font-size: 1rem;
 }
-.details-text{
+.details-text {
     background: white;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     border-radius: 5px;
 }
-.comments{
-    width:100%;
+.comments {
+    width: 100%;
 }
-.single-comment{
+.single-comment {
     display: flex;
     align-items: center;
     padding-right: 1rem;
     padding-left: 1rem;
     margin-bottom: 0.2rem;
-    border-bottom: 1.0px solid rgb(180, 170, 73);
+    border-bottom: 1px solid #a5a5a5;
 }
-.new-comment{
+.new-comment {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-top: 2rem;
@@ -64,99 +64,107 @@
     padding-right: 1rem;
     padding-left: 1rem;
     margin-bottom: 0.2rem;
-    border: 1.0px solid rgb(180, 170, 73);
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c5364,
+        #203a43,
+        #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid #a5a5a5;
 }
-.new-comment h1{
-    color: rgb(180, 170, 73);
-    font-size: 1.0rem;
+.new-comment h1 {
+    color: #a5a5a5;
+    font-size: 1rem;
 }
-.single-comment h1{
-    color:black;
+.single-comment h1 {
+    color: black;
     font-size: 1rem;
     margin-right: 0.5rem;
 }
-.single-comment input{
+.single-comment input {
     width: 85%;
     height: 1rem;
     border-radius: 5px;
 }
-.new-comment textarea{
+.new-comment textarea {
     width: 100%;
 }
-.blured{
+.blured {
     filter: blur(3px);
 }
-.new-comment button{
+.new-comment button {
     width: 4rem;
     height: 1.2rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
-    background: rgb(180, 170, 73);
+    background: #a5a5a5;
     color: white;
 }
-.new-comment button:hover{
-    background: rgb(155, 146, 63);
+.new-comment button:hover {
+    border: 1px solid #48a8c9;
     cursor: pointer;
 }
 @media screen and (max-width: 900px) {
-    .details-content{
+    .details-content {
         width: 30rem;
         padding: 1rem 1rem;
     }
-    
-    .details-content h1{
+
+    .details-content h1 {
         font-size: 1.2rem;
     }
-    .details-content h2{
+    .details-content h2 {
         font-size: 0.7rem;
     }
-    .details-content img{
+    .details-content img {
         width: 18rem;
         height: 13rem;
     }
-    .details-content p{
+    .details-content p {
         font-size: 1rem;
     }
 }
 @media screen and (max-width: 700px) {
-    .details-content{
+    .details-content {
         width: 25rem;
     }
-    .details-content h1{
-        font-size: 1.0rem;
+    .details-content h1 {
+        font-size: 1rem;
     }
-    .details-content h2{
+    .details-content h2 {
         font-size: 0.7rem;
     }
-    .details-content img{
+    .details-content img {
         width: 18rem;
         height: 13rem;
     }
-    .details-content p{
+    .details-content p {
         font-size: 0.8rem;
     }
-    .single-comment h1{
+    .single-comment h1 {
         font-size: 0.8rem;
     }
 }
 @media screen and (max-width: 550px) {
-    .details-content{
+    .details-content {
         width: 18rem;
     }
-    .details-content h1{
-        font-size: 1.0rem;
+    .details-content h1 {
+        font-size: 1rem;
     }
-    .details-content h2{
+    .details-content h2 {
         font-size: 0.7rem;
     }
-    .details-content img{
+    .details-content img {
         width: 15rem;
         height: 12rem;
     }
-    .details-content p{
+    .details-content p {
         font-size: 0.8rem;
     }
-    .single-comment h1{
+    .single-comment h1 {
         font-size: 0.8rem;
     }
 }

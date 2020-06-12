@@ -1,33 +1,33 @@
-.login{
+.login {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 3;
     display: flex;
-    width:100vw;
-    height:89vh;
+    width: 100vw;
+    height: 89vh;
     justify-content: center;
     align-items: center;
 }
 
-.login-tooltip{
+.login-tooltip {
     color: white;
-    width:8rem;
+    width: 8rem;
     padding: 0.5rem 0.5rem;
     border-radius: 5px;
-    border: 1px solid rgb(180, 170, 73);
+    border: 1px solid #a5a5a5;
     font-size: 0.7rem;
     background-color: rgba(255, 255, 255, 0.233);
 }
-.login-tooltip{
+.login-tooltip {
     position: absolute;
-    margin-left:90%;
-    margin-top:6rem;
+    margin-left: 90%;
+    margin-top: 6rem;
     border: 1px solid rgb(116, 116, 116);
-    background: rgb(180, 169, 73);
+    background: #a5a5a5;
     color: white;
 }
-.login-form{
+.login-form {
     display: flex;
     z-index: 3;
     position: absolute;
@@ -36,35 +36,38 @@
     justify-content: center;
     height: 20rem;
     width: 40rem;
-    border: 1px solid rgb(180, 170, 73);
-    border-radius: 5px;
-    background-image: url('../background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 15px;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c5364,
+        #203a43,
+        #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-#close-button{
-    margin-top:0;
+#close-button {
+    margin-top: 0;
     margin-left: 130%;
     width: 2rem;
     height: 2rem;
 }
-#visible{
+#visible {
     display: flex;
 }
-#hidden{
+#hidden {
     display: none;
 }
-.login-form-content h1{
+.login-form-content h1 {
     font-size: 1.5rem;
-    color: rgb(180, 170, 73);
+    color: #a5a5a5;
 }
-.login-form-content input{
-    height:1.5rem;
-    width:85%;
+.login-form-content input {
+    height: 1.5rem;
+    width: 85%;
 }
-.login-form-content{
+.login-form-content {
     display: flex;
     z-index: 5;
     position: absolute;
@@ -72,43 +75,44 @@
     align-items: flex-start;
     justify-content: flex-start;
     height: 90%;
-    width:50%;
+    width: 50%;
 }
-.login-form-content button{
+.login-form-content button {
     margin-top: 2rem;
-    height:2rem;
-    width:5rem;
+    height: 2rem;
+    width: 5rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
-    background: rgba(180, 169, 73, 0.973);
+    background: #a5a5a5;
     color: white;
 }
-input, textarea{
+input,
+textarea {
     border-radius: 5px;
-    border: 1px solid rgb(180, 170, 73);
+    border: 1px solid #a5a5a5;
 }
-.login-form-content button:hover{
-    background: rgba(180, 169, 73, 0.863);
+.login-form-content button:hover {
+    border: 1px solid #48a8c9;
     cursor: pointer;
 }
 @media screen and (max-width: 900px) {
-    .login-form{
-        height: 25rem;
+    .login-form {
+        height: 20rem;
         width: 25rem;
     }
-    #close-button{
+    #close-button {
         margin-left: 120%;
     }
-    .login-tooltip{
-        width:5rem;
+    .login-tooltip {
+        width: 5rem;
     }
 }
 @media screen and (max-width: 500px) {
-    .login-form{
-        height: 25rem;
+    .login-form {
+        height: 20rem;
         width: 20rem;
     }
-    .login-tooltip{
-        width:3rem;
+    .login-tooltip {
+        width: 3rem;
     }
 }

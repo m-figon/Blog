@@ -1,29 +1,33 @@
-.add{
+.add {
     display: flex;
-    width:100vw;
-    height:89vh;
+    width: 100vw;
+    height: 89vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 3rem;
 }
-.form{
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 35rem;
+    height: 30rem;
     width: 35rem;
     border: 1px solid rgb(116, 116, 116);
-    border-radius: 5px;
-    background-image: url('../background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
+    border-radius: 15px;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c5364,
+        #203a43,
+        #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.blured{
+.blured {
     filter: blur(3px);
 }
-.add-content{
+.add-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,56 +35,57 @@
     height: 100%;
     width: 60%;
 }
-#smaller{
+#smaller {
     font-size: 1.2rem;
 }
-.add-content textarea{
-    height:7rem;
-    width:100%;
+.add-content textarea {
+    height: 7rem;
+    width: 100%;
     margin-bottom: 1rem;
 }
-.add-content h1{
+.add-content h1 {
     font-size: 1.5rem;
-    color: rgb(180, 170, 73);
+    color: #a5a5a5;
 }
-.add-content input{
-    height:1.5rem;
-    width:100%;
+.add-content input {
+    height: 1.5rem;
+    width: 100%;
 }
-.add-content button{
-    height:2rem;
-    width:5rem;
+.add-content button {
+    height: 2rem;
+    width: 5rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
-    background: rgb(180, 170, 73);
+    background: #a5a5a5;
     color: white;
 }
-input, textarea{
+input,
+textarea {
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
 }
-.add-content button:hover{
-    background: rgb(155, 146, 63);
+.add-content button:hover {
+    border: 1px solid #48a8c9;
     cursor: pointer;
 }
 @media screen and (max-width: 650px) {
-    .form{
-        height: 35rem;
+    .form {
+        height: 30rem;
         width: 25rem;
     }
-    #smaller{
-        font-size: 1.0rem;
+    #smaller {
+        font-size: 1rem;
     }
-    .add-content textarea{
-        height:10rem;
+    .add-content textarea {
+        height: 10rem;
     }
-    .add-content h1{
+    .add-content h1 {
         font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 450px) {
-    .form{
-        height: 35rem;
+    .form {
+        height: 30rem;
         width: 20rem;
     }
 }

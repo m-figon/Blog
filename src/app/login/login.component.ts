@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
       }
     }
     if (!this.correctFlag) {
-      alert('wrong data');
       this.account = "";
       this.password = "";
       this.wrongUser=true;

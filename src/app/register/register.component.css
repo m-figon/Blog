@@ -7,7 +7,8 @@
     width: 100vw;
     height: 89vh;
     justify-content: center;
-    align-items: center;
+    margin-top: 5rem;
+    align-items: flex-start;
 }
 .register-form {
     display: flex;
@@ -17,13 +18,16 @@
     justify-content: center;
     height: 33rem;
     width: 40rem;
-    border: 1px solid rgb(180, 170, 73);
-    border-radius: 5px;
-    background-image: url("../background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 15px;
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c5364,
+        #203a43,
+        #0f2027
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .register-form-content {
     display: flex;
@@ -34,10 +38,10 @@
     width: 50%;
 }
 #incorrect {
-    border: 2px solid red;
+    border: 1.5px solid red;
 }
 #correct {
-    border: 1px solid rgb(180, 170, 73);
+    border: 1px solid #a5a5a5;
 }
 .account-tooltip,
 .password-tooltip,
@@ -49,7 +53,7 @@
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
     font-size: 0.7rem;
-    background-color: rgb(180, 170, 73);
+    background-color: #a5a5a5;
 }
 .account-tooltip {
     position: absolute;
@@ -85,7 +89,7 @@
 }
 .register-form h1 {
     font-size: 1.5rem;
-    color: rgb(180, 170, 73);
+    color: #a5a5a5;
 }
 .register-form input {
     height: 1.5rem;
@@ -97,21 +101,21 @@
     width: 5rem;
     border-radius: 5px;
     border: 1px solid rgb(116, 116, 116);
-    background: rgb(180, 170, 73);
+    background: #a5a5a5;
     color: white;
 }
 input,
 textarea {
     border-radius: 5px;
-    border: 1px solid rgb(180, 170, 73);
+    border: 1px solid #a5a5a5;
 }
 .register-form button:hover {
-    background: rgba(180, 169, 73, 0.863);
+    border: 1px solid #48a8c9;
     cursor: pointer;
 }
 @media screen and (max-width: 900px) {
     .register-form {
-        height: 35rem;
+        height: 33rem;
         width: 30rem;
     }
     .register-form-content {
@@ -146,7 +150,7 @@ textarea {
 }
 @media screen and (max-width: 550px) {
     .register-form {
-        height: 35rem;
+        height: 28rem;
         width: 20rem;
     }
     #close-button {
@@ -176,3 +180,8 @@ textarea {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .register {
+        justify-content: flex-start;
+    }
+}

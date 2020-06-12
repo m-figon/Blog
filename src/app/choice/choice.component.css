@@ -49,7 +49,7 @@
 #selectedNum:hover,
 #num:hover {
     cursor: pointer;
-    color: rgb(180, 170, 73);
+    color: #48a8c9;
 }
 .post {
     display: flex;
@@ -66,19 +66,20 @@
     justify-content: center;
     height: 12rem;
     width: 10rem;
-    background: #3c3b3f; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, rgb(66, 63, 41), #3c3b3f); /* Chrome 10-25, Safari 5.1-6 */
+    background: #0f2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
         to right,
-        rgb(66, 63, 41),
-        #3c3b3f
+        #2c5364,
+        #203a43,
+        #0f2027
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 2px solid rgb(173, 173, 173);
     border-radius: 5px;
     padding: 1rem 1rem;
 }
 .post-content:hover {
-    border: 2px solid rgb(180, 170, 73);
+    border: 2px solid #48a8c9;
 }
 
 .post h1 {
@@ -90,7 +91,7 @@
 }
 .post-date h1 {
     font-size: 0.7rem;
-    color: rgb(180, 170, 73);
+    color: #a5a5a5;
 }
 .post p {
     font-size: 1rem;
@@ -145,7 +146,7 @@
         height: 10.5rem;
         width: 6rem;
     }
-    .post-title h1{
+    .post-title h1 {
         font-size: 0.7rem;
     }
     .post img {
