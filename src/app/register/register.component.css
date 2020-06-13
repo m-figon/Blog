@@ -38,7 +38,7 @@
     width: 50%;
 }
 #incorrect {
-    border: 1.5px solid red;
+    border: 1px solid red;
 }
 #correct {
     border: 1px solid #a5a5a5;
@@ -111,9 +111,9 @@ textarea {
 }
 .register-form button:hover {
     -webkit-box-shadow: 0px 0px 3px 1px #48a8c9;
--moz-box-shadow: 0px 0px 3px 1px #48a8c9;
-box-shadow: 0px 0px 3px 1px #48a8c9;
-   cursor: pointer;
+    -moz-box-shadow: 0px 0px 3px 1px #48a8c9;
+    box-shadow: 0px 0px 3px 1px #48a8c9;
+    cursor: pointer;
 }
 @media screen and (max-width: 900px) {
     .register-form {

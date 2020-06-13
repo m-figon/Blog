@@ -2,9 +2,9 @@
     <div class="login-form">
         <div class="login-form-content">
             <button id="close-button" (click)="closeLogin()">X</button>
-            <h1>Account</h1><input autocomplete="off" [(ngModel)]="account" type="text">
+            <h1>Account</h1><input [style.border]="wrongUser ? '1px solid red' : '' " autocomplete="off" [(ngModel)]="account" type="text">
             <div class="login-tooltip" [style.display]="wrongUser ? 'flex' : 'none'">Please enter correct data</div>
-            <h1>Password</h1><input autocomplete="off" [(ngModel)]="password" type="password">
+            <h1>Password</h1><input [style.border]="wrongUser ? '1px solid red' : '' " autocomplete="off" [(ngModel)]="password" type="password">
             <button (click)="loginSend()">Login</button>
         </div>
     </div>

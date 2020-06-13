@@ -35,6 +35,7 @@ export class NavigationBarComponent implements OnInit {
   }
   logoutClick(){
     console.log('logout click');
+    this.appService.setLoginOrRegister("login",false);
     this.accountEmiter.emit("");
   }
 }
