@@ -89,7 +89,7 @@
 }
 .register-form h1 {
     font-size: 1.5rem;
-    color: #a5a5a5;
+    color: white;
 }
 .register-form input {
     height: 1.5rem;
@@ -110,8 +110,10 @@ textarea {
     border: 1px solid #a5a5a5;
 }
 .register-form button:hover {
-    border: 1px solid #48a8c9;
-    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px 1px #48a8c9;
+-moz-box-shadow: 0px 0px 3px 1px #48a8c9;
+box-shadow: 0px 0px 3px 1px #48a8c9;
+   cursor: pointer;
 }
 @media screen and (max-width: 900px) {
     .register-form {

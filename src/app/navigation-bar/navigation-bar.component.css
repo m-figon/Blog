@@ -32,12 +32,14 @@
 }
 .navigation-bar h1:hover {
     cursor: pointer;
-    color: #a5a5a5;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 }
-.middle .middle h1 {
+.middle .middle h1,
+.right .middle h1  {
     font-size: 1.5rem;
     margin-left: 1rem;
 }
+
 .left {
     width: 100%;
     height: 100%;
@@ -64,13 +66,15 @@
         width: 90%;
     }
     .navigation-bar h1,
-    .middle .middle h1 {
+    .middle .middle h1,
+    .right .middle h1 {
         font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 600px) {
     .navigation-bar h1,
-    .middle .middle h1 {
+    .middle .middle h1,
+    .right .middle h1 {
         font-size: 1rem;
     }
     .left {

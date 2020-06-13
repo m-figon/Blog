@@ -19,30 +19,29 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.logedUser = this.appService.getAccount();
-    setInterval(()=>{
+    setInterval(() => {
       this.loginState = this.appService.getLoginOrRegister("login");
       this.registerState = this.appService.getLoginOrRegister("register");
-    },500)
+    }, 500)
   }
   addPost() {
+    function convertDate(tmp, currentDate, newCurrentDate) {
+      tmp = currentDate.substr(6, 4);
+      newCurrentDate += tmp;
+      tmp = "/";
+      tmp += currentDate.substr(0, 2);
+      newCurrentDate += tmp;
+      tmp = "/";
+      tmp += currentDate.substr(3, 2);
+      newCurrentDate += tmp;
+      return newCurrentDate;
+    }
     if (this.title && this.img && this.content && this.logedUser) {
       console.log('adding posts');
       let tmp;
       let newCurrentDate = "";
       let currentDate = moment().format('L');
-      console.log(currentDate);
-      tmp = currentDate.substr(6, 4);
-      console.log(tmp);
-      newCurrentDate += tmp;
-      console.log(newCurrentDate);
-      tmp = "/";
-      tmp += currentDate.substr(0, 2);
-      newCurrentDate += tmp;
-      console.log(newCurrentDate);
-      tmp = "/";
-      tmp += currentDate.substr(3, 2);
-      newCurrentDate += tmp;
-      console.log(newCurrentDate);
+      newCurrentDate = convertDate(tmp, currentDate, newCurrentDate);
       this.http.post<any>("https://rocky-citadel-32862.herokuapp.com/Blog/posts", {
         title: this.title,
         img: this.img,
@@ -55,7 +54,9 @@ export class AddComponent implements OnInit {
         this.title = "";
         this.img = "";
         this.content = "";
-})
+      })
+    } else {
+      alert('Invalid data');
     }
   }
 }
