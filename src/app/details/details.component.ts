@@ -23,6 +23,8 @@ export class DetailsComponent implements OnInit {
       setInterval(()=>{
         this.loginState = this.appService.getLoginOrRegister("login");
         this.registerState = this.appService.getLoginOrRegister("register");
+        this.logedUser = this.appService.getAccount();
+        console.log(this.logedUser);
       },500)
   }
   changeArea(oldValue, newValue){
