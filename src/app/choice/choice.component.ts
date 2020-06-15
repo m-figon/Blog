@@ -17,14 +17,8 @@ export class ChoiceComponent implements OnInit {
   pages = [];
   postNames = [];
   loaded=false;
-  loginState;
-  registerState;
   constructor(private http: HttpClient,private appService: AppService) {}
   ngOnInit(): void {
-    setInterval(()=>{
-      this.loginState = this.appService.getLoginOrRegister("login");
-      this.registerState = this.appService.getLoginOrRegister("register");
-    },500)
     this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog/posts').subscribe(data => {
       //console.log(data);
       this.posts = data;

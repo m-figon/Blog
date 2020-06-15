@@ -13,16 +13,11 @@ export class AddComponent implements OnInit {
   public img = "";
   public content = "";
   public logedUser;
-  loginState;
-  registerState;
   constructor(private http: HttpClient, private appService: AppService) { }
 
   ngOnInit(): void {
     this.logedUser = this.appService.getAccount();
-    setInterval(() => {
-      this.loginState = this.appService.getLoginOrRegister("login");
-      this.registerState = this.appService.getLoginOrRegister("register");
-    }, 500)
+
   }
   addPost() {
     function convertDate(tmp, currentDate, newCurrentDate) {

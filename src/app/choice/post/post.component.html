@@ -2,7 +2,7 @@
 
     <ng-container *ngFor="let post of parentPosts">
 
-        <ng-container *ngIf="post.title.includes(parentSearch) && post.id<maxVal && post.id>minVal">
+        <ng-container *ngIf="post.title.toLowerCase().includes(parentSearch.toLowerCase()) && post.id<maxVal && post.id>minVal">
             <div class="post">
                 <a routerLink="/post/{{post.id}}" routerLinkActive="active" [state]="parentCurrentPosts">
                 <div class="post-content">

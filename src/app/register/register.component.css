@@ -5,10 +5,10 @@
     z-index: 3;
     display: flex;
     width: 100vw;
-    height: 89vh;
+    height: 100vh;
     justify-content: center;
-    margin-top: 5rem;
-    align-items: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.507);
 }
 .register-form {
     display: flex;

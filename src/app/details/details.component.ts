@@ -12,8 +12,6 @@ export class DetailsComponent implements OnInit {
   id;
   post;
   logedUser;
-  loginState;
-  registerState;
   newComment="Enter new comment value...";
   constructor(private route: ActivatedRoute,private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
@@ -21,8 +19,6 @@ export class DetailsComponent implements OnInit {
       this.post = history.state;
       this.logedUser = this.appService.getAccount();
       setInterval(()=>{
-        this.loginState = this.appService.getLoginOrRegister("login");
-        this.registerState = this.appService.getLoginOrRegister("register");
         this.logedUser = this.appService.getAccount();
         console.log(this.logedUser);
       },500)

@@ -10,10 +10,6 @@ export class NavigationBarComponent implements OnInit {
 
   constructor(private appService: AppService) { }
   ngOnInit(): void {
-    setInterval(()=>{
-      this.loginState = this.appService.getLoginOrRegister("login");
-      this.registerState = this.appService.getLoginOrRegister("register");
-    },500)
   }
   public loginState=false;
   public registerState=false;
