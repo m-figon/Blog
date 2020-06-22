@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from '../app.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,10 +13,13 @@ export class DetailsComponent implements OnInit {
   post;
   logedUser;
   newComment="Enter new comment value...";
-  constructor(private route: ActivatedRoute,private appService: AppService, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute,private router: Router, private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
      this.id = parseInt(this.route.snapshot.paramMap.get('id'));
       this.post = history.state;
+      if(!this.post[this.id]){
+        this.router.navigate(['/choice']);
+      }
       this.logedUser = this.appService.getAccount();
       setInterval(()=>{
         this.logedUser = this.appService.getAccount();
