@@ -1,0 +1,200 @@
+@import "../main";
+.posts-display {
+    display: flex;
+    width: 100vw;
+    height: 89vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.post-view {
+    width: 55rem;
+    padding: 2rem 2rem;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    border-radius: 10px;
+}
+.posts {
+    display: grid;
+    width: 55rem;
+    height: 30rem;
+    grid-template-columns: auto auto auto auto;
+}
+.search-bar input,
+.search-bar select {
+    border-radius: 7px;
+    border: 1.5px solid rgb(173, 173, 173);
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.one-line {
+    display: flex;
+    justify-content: flex-end;
+}
+#num,
+#selectedNum {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    &:hover {
+        cursor: pointer;
+        color: #48a8c9;
+    }
+}
+#selectedNum {
+    text-decoration: underline;
+}
+.blured {
+    filter: blur(3px);
+}
+.post {
+    flex-direction: column;
+    .flex-box();
+    height: 100%;
+    width: 100%;
+    h1 {
+        font-size: 1rem;
+        color: white;
+    }
+    p {
+        font-size: 1rem;
+    }
+    img {
+        width: 10rem;
+        height: 6rem;
+        filter: grayscale(20%);
+    }
+}
+.post-content {
+    flex-direction: column;
+    .flex-box();
+    height: 12rem;
+    width: 10rem;
+    .background();
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    &:hover {
+        -webkit-box-shadow: 0px 0px 3px 1px #48a8c9;
+        -moz-box-shadow: 0px 0px 3px 1px #48a8c9;
+        box-shadow: 0px 0px 3px 1px #48a8c9;
+    }
+}
+
+.post-title h1 {
+    font-size: 0.8rem;
+}
+.post-date h1 {
+    font-size: 0.7rem;
+    color: #a5a5a5;
+}
+.loading-page {
+    position: absolute;
+    .flex-box();
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(204, 204, 204, 1);
+    z-index: 5;
+    img {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .post-content {
+        height: 10rem;
+        width: 9rem;
+    }
+    .post img {
+        width: 8rem;
+        height: 5rem;
+        filter: grayscale(20%);
+    }
+    .posts {
+        width: 50rem;
+        height: 26rem;
+    }
+    .post-view {
+        padding: 1rem 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 50rem;
+    }
+    #num,
+    #selectedNum {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .post-content {
+        height: 10.5rem;
+        width: 6rem;
+    }
+    .post-title h1 {
+        font-size: 0.7rem;
+    }
+    .post img {
+        width: 6rem;
+        height: 4rem;
+        filter: grayscale(20%);
+    }
+    .posts {
+        width: 40rem;
+        height: 26rem;
+    }
+    .post-view {
+        padding: 0.5rem 0.5rem;
+        padding-bottom: 0rem;
+        width: 40rem;
+    }
+    #num,
+    #selectedNum {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .post-content {
+        height: 8rem;
+        width: 9rem;
+    }
+    .post img {
+        width: 6rem;
+        height: 4rem;
+        filter: grayscale(20%);
+    }
+    .posts {
+        width: 30rem;
+        height: auto;
+        grid-template-columns: auto auto;
+    }
+    .post-view {
+        padding: 0.5rem 0.5rem;
+        padding-bottom: 0rem;
+        width: 30rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .post-content {
+        height: 9rem;
+        width: 7rem;
+    }
+    .post img {
+        width: 6rem;
+        height: 4rem;
+        filter: grayscale(20%);
+    }
+    .posts {
+        width: 20rem;
+        height: auto;
+        grid-template-columns: auto auto;
+    }
+    .post-view {
+        padding: 0.5rem 0.5rem;
+        padding-bottom: 0rem;
+        width: 20rem;
+    }
+}

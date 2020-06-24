@@ -1,0 +1,85 @@
+@import "../main";
+.home {
+    .flex-box();
+    width: 100vw;
+    height: 89vh;
+}
+.img-container {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    display: flex;
+    img {
+        margin: 3rem 3rem;
+        width: 20rem;
+        border-radius: 5px;
+    }
+}
+.blured {
+    filter: blur(3px);
+}
+.quote {
+    position: relative;
+    border-radius: 7px;
+    .flex-box();
+    height: 100%;
+    width: 50%;
+    padding: 0rem 2rem;
+    z-index: 2;
+    p {
+        font-size: 1.3rem;
+        font-family: "Dancing Script", cursive;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .img-container {
+        width: 40rem;
+        height: 32rem;
+        img {
+            margin: 3rem 3rem;
+            margin-right: 0;
+            width: 17rem;
+        }
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .img-container {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 10px;
+        img {
+            margin: 1.5rem 1rem;
+            width: 13rem;
+            border-radius: 5px;
+        }
+    }
+    .quote {
+        height: 100%;
+        width: 10rem;
+        padding: 0.5rem;
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .img-container {
+        width: 21.5rem;
+        img {
+            margin: 1.5rem 0.5rem;
+            width: 13rem;
+        }
+    }
+    .quote {
+        width: 7rem;
+        padding: 0rem;
+        p {
+            font-size: 0.7rem;
+        }
+    }
+}

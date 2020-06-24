@@ -1,0 +1,85 @@
+@import "../main";
+.add {
+    display: flex;
+    width: 100vw;
+    height: 89vh;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+.form {
+    flex-direction: column;
+    .flex-box();
+    height: 30rem;
+    width: 35rem;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 15px;
+    .background();
+}
+.blured {
+    filter: blur(3px);
+}
+.add-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    textarea {
+        height: 7rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+        color: white;
+    }
+    input {
+        height: 1.5rem;
+        width: 100%;
+    }
+    button {
+        height: 2rem;
+        width: 5rem;
+        border-radius: 5px;
+        border: 1px solid rgb(116, 116, 116);
+        background: #a5a5a5;
+        color: white;
+        &:hover {
+            -webkit-box-shadow: 0px 0px 3px 1px #48a8c9;
+            -moz-box-shadow: 0px 0px 3px 1px #48a8c9;
+            box-shadow: 0px 0px 3px 1px #48a8c9;
+            cursor: pointer;
+        }
+    }
+}
+#smaller {
+    font-size: 1.2rem;
+}
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid rgb(116, 116, 116);
+}
+@media screen and (max-width: 650px) {
+    .form {
+        height: 30rem;
+        width: 25rem;
+    }
+    #smaller {
+        font-size: 1rem;
+    }
+    .add-content textarea {
+        height: 10rem;
+    }
+    .add-content h1 {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .form {
+        height: 30rem;
+        width: 20rem;
+    }
+}
