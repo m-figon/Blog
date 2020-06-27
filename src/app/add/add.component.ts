@@ -9,17 +9,16 @@ import { AppService } from '../app.service';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  public title = "";
-  public img = "";
-  public content = "";
-  public logedUser;
+  public title: string = "";
+  public img: string = "";
+  public content: string = "";
+  public logedUser: string;
   constructor(private http: HttpClient, private appService: AppService) { }
 
   ngOnInit(): void {
     this.logedUser = this.appService.getAccount();
-
   }
-  addPost() {
+  addPost(): void {
     function convertDate(tmp, currentDate, newCurrentDate) {
       tmp = currentDate.substr(6, 4);
       newCurrentDate += tmp;

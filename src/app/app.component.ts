@@ -8,18 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Blog';
-  logedUser;
-  loginValue;
-  registerValue;
-  parentMethod($event) {
+  public logedUser;
+  public loginValue;
+  public registerValue;
+  parentMethod($event): void {
     this.loginValue = $event;
     console.log("login value equals " + this.loginValue);
   }
-  parentMethod2($event) {
+  parentMethod2($event): void  {
     this.logedUser = $event;
     console.log("loged user is " + this.logedUser);
   }
-  parentMethod3($event) {
+  parentMethod3($event): void  {
     this.registerValue = $event;
     console.log("register value equals " + this.registerValue);
   }

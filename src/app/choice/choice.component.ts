@@ -9,14 +9,14 @@ import * as _ from 'underscore';
   styleUrls: ['./choice.component.css']
 })
 export class ChoiceComponent implements OnInit {
-  search="";
-  filter="";
-  posts;
-  rawPosts;
-  pagesNumber;
-  pages = [];
-  postNames = [];
-  loaded=false;
+  public search: string="";
+  public filter: string="";
+  public posts: any[];
+  private rawPosts: any[];
+  private pagesNumber:number;
+  public pages = [];
+  private postNames = [];
+  public loaded: boolean=false;
   constructor(private http: HttpClient,private appService: AppService) {}
   ngOnInit(): void {
     this.http.get<any>('https://rocky-citadel-32862.herokuapp.com/Blog/posts').subscribe(data => {
@@ -37,7 +37,7 @@ export class ChoiceComponent implements OnInit {
       console.log(this.loaded);
     })
   }
-  selectChange(){
+  selectChange(): void {
     console.log('select change');
     if(this.filter===""){
       this.posts=this.rawPosts.slice();

@@ -13,17 +13,17 @@ export class PostComponent implements OnInit {
   @Input() public parentFilter;
 
   constructor() { }
-  currentPage=1;
-  minVal=-1;
-  maxVal=8;
+  private currentPage: number=1;
+  public minVal: number=-1;
+  public maxVal: number=8;
   ngOnInit(): void {
   }
-  changePage(num){
+  changePage(num: number): void {
     this.currentPage=num;
     this.maxVal=8*this.currentPage;
     this.minVal=this.maxVal-9;
   }
-  checkingPage(num){
+  checkingPage(num: number): boolean {
     if(this.currentPage===num){
       return true;
     }

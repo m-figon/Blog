@@ -11,11 +11,11 @@ import { AppService } from '../app.service';
 export class LoginComponent implements OnInit {
 
   constructor(private http: HttpClient, private appService: AppService) { }
-  account = "";
-  password = "";
-  users;
-  correctFlag = false;
-  wrongUser = false;
+  public account: string = "";
+  public password: string = "";
+  private users;
+  private correctFlag: boolean = false;
+  public wrongUser: boolean = false;
   @Output() loginEmiter = new EventEmitter();
   @Output() accountEmiter = new EventEmitter();
 

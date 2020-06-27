@@ -1,0 +1,13 @@
+lessc src/app/register/register.component.less src/app/register/register.component.css
+
+lessc src/app/navigation-bar/navigation-bar.component.less src/app/navigation-bar/navigation-bar.component.css
+
+lessc src/app/login/login.component.less src/app/login/login.component.css
+
+lessc src/app/home/home.component.less src/app/home/home.component.css
+
+lessc src/app/details/details.component.less src/app/details/details.component.css
+
+lessc src/app/choice/choice.component.less src/app/choice/choice.component.css
+
+lessc src/app/add/add.component.less src/app/add/add.component.css

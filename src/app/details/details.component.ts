@@ -9,9 +9,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  id;
-  post;
-  logedUser;
+  public id: number;
+  public post;
+  public logedUser: string;
   newComment="Enter new comment value...";
   constructor(private route: ActivatedRoute,private router: Router, private appService: AppService, private http: HttpClient) { }
   ngOnInit(): void {
@@ -26,13 +26,13 @@ export class DetailsComponent implements OnInit {
         console.log(this.logedUser);
       },500)
   }
-  changeArea(oldValue, newValue){
+  changeArea(oldValue: string, newValue: string): void {
     if(this.newComment===oldValue){
       this.newComment=newValue;
     }
   }
 
-  addComment(){
+  addComment(): void {
     this.post[this.id].comments.push({
       author: this.logedUser,
       content: this.newComment,

@@ -11,25 +11,25 @@ export class NavigationBarComponent implements OnInit {
   constructor(private appService: AppService) { }
   ngOnInit(): void {
   }
-  public loginState=false;
-  public registerState=false;
+  private loginState: boolean=false;
+  private registerState: boolean=false;
   @Input() public parentLoged;
   @Output() loginEmiter = new EventEmitter();
   @Output() registerEmiter = new EventEmitter();
   @Output() accountEmiter = new EventEmitter();
-  loginClick(){
+  loginClick(): void {
     console.log('login click');
     this.loginState = !this.loginState;
     this.appService.setLoginOrRegister("login",true);
     this.loginEmiter.emit(this.loginState);
   }
-  registerClick(){
+  registerClick(): void {
     console.log('register click');
     this.registerState = !this.registerState;
     this.appService.setLoginOrRegister("register",true);
     this.registerEmiter.emit(this.registerState);
   }
-  logoutClick(){
+  logoutClick(): void {
     console.log('logout click');
     this.appService.setLoginOrRegister("login",false);
     this.appService.setAccount("");
