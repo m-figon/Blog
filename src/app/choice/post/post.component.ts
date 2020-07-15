@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['../choice.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class PostComponent implements OnInit {
   @Input() public parentPosts;

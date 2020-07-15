@@ -6,7 +6,7 @@ import * as _ from 'underscore';
 @Component({
   selector: 'app-choice',
   templateUrl: './choice.component.html',
-  styleUrls: ['./choice.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class ChoiceComponent implements OnInit {
   public search: string="";
