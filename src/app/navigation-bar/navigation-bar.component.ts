@@ -4,7 +4,7 @@ import { AppService } from '../app.service';
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class NavigationBarComponent implements OnInit {
 
